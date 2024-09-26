@@ -14,7 +14,9 @@ class Channel:
         return video
 
     def upload_short(self, title, description):
-        short_video = ShortVideo(title, description)  # Create a ShortVideo object
+        short_video = ShortVideo(
+            title, description
+        )  # Create a ShortVideo object
         self.vedio.append(short_video)
         return short_video
 

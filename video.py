@@ -6,7 +6,9 @@ class Video:
         self.comment = []
 
     def view_video(self):
-        print(f"Watching: {self.title}\nDescription: {self.description}")
+        print(
+            f"Watching: {self.title}\nDescription: {self.description}"
+        )
 
     def add_comment(self, comment):
         self.comment.append(comment)
