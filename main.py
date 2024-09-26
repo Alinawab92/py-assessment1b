@@ -11,9 +11,7 @@ def main():
     print(f"{user1.name} created the channel: {channel1.name}")
 
     # User1 uploads a Video
-    video1 = channel1.upload_video(
-        "Tom and Jerry", "Review of the latest Episode."
-    )
+    video1 = channel1.upload_video("Tom and Jerry", "Review of the latest Episode.")
     print(f"Video uploaded: {video1.title}")
 
     # User2 subscribes to User1's Channel
@@ -26,15 +24,11 @@ def main():
     user2.like_video(video1)
 
     # User2 comments on the Video
-    user2_comment = user2.comment_on_video(
-        video1, "This was super helpful, thanks!"
-    )
+    user2_comment = user2.comment_on_video(video1, "This was super helpful, thanks!")
     print(f"Comment added by {user2.name}: {user2_comment.text}")
 
     # User1 replies to the comment made by User2
-    user1_reply = user2_comment.add_reply(
-        "Glad you found it useful!", user1
-    )
+    user1_reply = user2_comment.add_reply("Glad you found it useful!", user1)
 
     # Display video information after interactions
     print("\nVideo Info After User Interactions:")
@@ -50,9 +44,7 @@ def main():
     print(short_video1.get_video_info())
 
     # Show the number of subscribers to the channel
-    print(
-        f"\nTotal Subscribers of {channel1.name}: {channel1.get_subscriber_count()}"
-    )
+    print(f"\nTotal Subscribers of {channel1.name}: {channel1.get_subscriber_count()}")
 
 
 if __name__ == "__main__":
