@@ -1,14 +1,15 @@
 from channel import Channel
-from video import Video, ShortVideo
+from video import Video
+from shortvedio import ShortVideo
 from comment import Comment
 
 
 class User:
-    def __init__(self, name, email):
+    def __init__(self, name, email, comment=None):
         self.name = name
         self.email = email
-        self.channels = []  # A user can have multiple channels
-        self.subscribed_channels = []
+        self.channels = []
+        self.subscribed_channels
 
     def create_channel(self, channel_name):
         channel = Channel(channel_name, self)
@@ -28,8 +29,6 @@ class User:
         return "Like added"
 
     def comment_on_video(self, video, text):
-        comment = Comment(
-            text, self
-        )  # Comment has a "has-a" relationship with User
+        comment = Comment(text, self)
         video.add_comment(comment)
         return comment
